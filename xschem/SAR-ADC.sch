@@ -49,6 +49,7 @@ N 670 190 670 220 {lab=GND}
 N 710 190 780 190 {lab=#net27}
 N 670 160 740 160 {lab=#net27}
 N 740 160 740 190 {lab=#net27}
+N -50 -210 40 -210 {lab=0}
 C {TG.sym} -40 -160 2 1 {name=x1}
 C {TG.sym} -40 210 0 0 {name=x2}
 C {CDAC.sym} 260 180 0 0 {name=x3}
@@ -92,10 +93,10 @@ C {lab_wire.sym} 540 -340 0 0 {name=p30 sig_type=std_logic lab=D1}
 C {NAND.sym} 1350 120 0 0 {name=x8}
 C {lab_wire.sym} 1120 50 0 1 {name=p32 sig_type=std_logic lab=GND}
 C {lab_wire.sym} 1120 -30 2 0 {name=p31 sig_type=std_logic lab=VDD}
-C {vsource.sym} -300 0 0 0 {name=V3 value=0 savecurrent=false}
-C {vsource.sym} -190 110 0 0 {name=V4 value=0 savecurrent=false}
+C {vsource.sym} -300 0 0 0 {name=V3 value="SIN(0 0.9 2k)" savecurrent=false}
+C {vsource.sym} -190 110 0 0 {name=V4 value="SIN(0 -0.9 2k)" savecurrent=false}
 C {lab_wire.sym} -250 140 2 1 {name=p33 sig_type=std_logic lab=GND}
-C {vsource.sym} 620 40 0 0 {name=V5 value=1.2 savecurrent=false}
+C {vsource.sym} 620 40 0 0 {name=V5 value="PULSE(0 1.8 0 1u 1u 10u 20u)" savecurrent=false}
 C {lab_wire.sym} 620 70 2 1 {name=p34 sig_type=std_logic lab=GND}
 C {symbols/nfet_03v3.sym} 690 190 0 1 {name=M1
 L=0.28u
@@ -131,3 +132,6 @@ C {lab_wire.sym} 740 220 2 1 {name=p36 sig_type=std_logic lab=GND}
 C {lab_wire.sym} 1340 -50 0 0 {name=p37 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1340 60 2 1 {name=p38 sig_type=std_logic lab=GND}
 C {opin.sym} 1440 0 0 0 {name=p39 lab=out}
+C {vsource.sym} -50 -240 0 0 {name=V6 value=1.2 savecurrent=false}
+C {lab_pin.sym} -50 -270 0 0 {name=p40 sig_type=std_logic lab=Vref}
+C {iopin.sym} -80 -320 0 0 {name=p41 lab=Vref}
