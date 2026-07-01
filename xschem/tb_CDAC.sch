@@ -175,12 +175,14 @@ only_toplevel=false
 value="
 .tran 1n 500u
 .control
+.save all
 run
+plot v(c1) v(c2)+2 v(c3)+4 c(c4)+6 v(c5)+8 v(c6)+10 v(c7)+12 v(c8)+14 
 plot v(vop)
 .endc
 .end
 "}
-C {devices/code_shown.sym} 150 -450 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 680 -470 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
