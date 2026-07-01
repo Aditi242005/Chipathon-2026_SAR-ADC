@@ -180,9 +180,14 @@ plot v(vop)
 .endc
 .end
 "}
-C {devices/code_shown.sym} 160 -420 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 150 -450 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice res_typical
+.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
+* .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
