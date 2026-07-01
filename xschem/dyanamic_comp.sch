@@ -1,8 +1,9 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N -260 -360 -260 -260 {lab=#net1}
 N -260 -390 -190 -390 {lab=AVDD}
@@ -28,8 +29,8 @@ N 210 90 210 200 {lab=Clkc}
 N -700 200 210 200 {lab=Clkc}
 N -640 40 -640 60 {lab=#net3}
 N 130 40 130 60 {lab=#net4}
-N -390 -60 -390 60 {lab=#net5}
-N -130 -60 -130 60 {lab=#net6}
+N -390 -60 -390 60 {lab=#net3}
+N -130 -60 -130 60 {lab=#net4}
 N -260 -460 -260 -420 {lab=AVDD}
 N -260 -460 -190 -460 {lab=AVDD}
 N -190 -460 -190 -390 {lab=AVDD}
@@ -52,10 +53,9 @@ N -640 160 -390 160 {lab=AGND}
 N -390 160 -270 160 {lab=AGND}
 N -270 160 -130 160 {lab=AGND}
 N -130 160 130 160 {lab=AGND}
-N -640 40 -310 40 {lab=#net3}
 N -780 40 -640 40 {lab=#net3}
-N 360 -30 360 90 {lab=#net7}
-N 270 40 360 40 {lab=#net7}
+N 360 -30 360 90 {lab=#net5}
+N 270 40 360 40 {lab=#net5}
 N 400 -0 400 60 {lab=Outn}
 N 400 90 400 120 {lab=AGND}
 N 400 -60 400 -30 {lab=AVDD}
@@ -75,8 +75,11 @@ N 400 120 400 160 {lab=AGND}
 N -820 120 -820 160 {lab=AGND}
 N -820 160 -640 160 {lab=AGND}
 N -700 90 -700 200 {lab=Clkc}
-N -230 40 130 40 {lab=#net4}
 N 130 40 210 40 {lab=#net4}
+N -390 40 -310 40 {lab=#net3}
+N -640 40 -390 40 {lab=#net3}
+N -230 40 -130 40 {lab=#net4}
+N -130 40 130 40 {lab=#net4}
 C {symbols/pfet_03v3.sym} -410 -90 0 0 {name=MP1
 L=2u
 W=2u

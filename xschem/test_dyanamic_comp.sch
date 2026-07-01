@@ -1,8 +1,9 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N -260 -390 -190 -390 {lab=AVDD}
 N -190 -390 -190 -230 {lab=AVDD}
@@ -26,8 +27,8 @@ N 210 90 210 200 {lab=Clkc}
 N -700 200 210 200 {lab=Clkc}
 N -640 40 -640 60 {lab=#net2}
 N 130 40 130 60 {lab=#net3}
-N -390 -60 -390 60 {lab=#net4}
-N -130 -60 -130 60 {lab=#net5}
+N -390 -60 -390 60 {lab=#net2}
+N -130 -60 -130 60 {lab=#net3}
 N -260 -460 -260 -420 {lab=AVDD}
 N -260 -460 -190 -460 {lab=AVDD}
 N -190 -460 -190 -390 {lab=AVDD}
@@ -36,8 +37,8 @@ N -880 -460 -880 -390 {lab=AVDD}
 N -390 -90 -360 -90 {lab=AVDD}
 N -360 -460 -360 -90 {lab=AVDD}
 N -310 -500 -310 -460 {lab=AVDD}
-N -810 -390 -810 -340 {lab=#net6}
-N -880 -340 -810 -340 {lab=#net6}
+N -810 -390 -810 -340 {lab=#net4}
+N -880 -340 -810 -340 {lab=#net4}
 N -190 -460 -150 -460 {lab=AVDD}
 N -150 -460 -150 -90 {lab=AVDD}
 N -150 -90 -130 -90 {lab=AVDD}
@@ -49,7 +50,6 @@ N -640 160 -390 160 {lab=AGND}
 N -390 160 -270 160 {lab=AGND}
 N -270 160 -130 160 {lab=AGND}
 N -130 160 130 160 {lab=AGND}
-N -640 40 -310 40 {lab=#net2}
 N -780 40 -640 40 {lab=#net2}
 N 360 -30 360 90 {lab=#net3}
 N 270 40 360 40 {lab=#net3}
@@ -64,27 +64,30 @@ N -820 0 -820 60 {lab=Outp}
 N -820 90 -820 120 {lab=AGND}
 N -820 -60 -820 -30 {lab=AVDD}
 N -950 40 -820 40 {lab=Outp}
-N -880 -360 -880 -340 {lab=#net6}
+N -880 -360 -880 -340 {lab=#net4}
 N -820 -460 -820 -60 {lab=AVDD}
 N 130 160 400 160 {lab=AGND}
 N 400 120 400 160 {lab=AGND}
 N -820 120 -820 160 {lab=AGND}
 N -820 160 -640 160 {lab=AGND}
 N -700 90 -700 200 {lab=Clkc}
-N -230 40 130 40 {lab=#net3}
 N 130 40 210 40 {lab=#net3}
 N -1260 80 -1260 90 {lab=GND}
-N -880 -250 -880 -190 {lab=#net7}
-N -880 -340 -880 -310 {lab=#net6}
+N -880 -250 -880 -190 {lab=#net5}
+N -880 -340 -880 -310 {lab=#net4}
 N -390 -150 -260 -150 {lab=#net1}
 N -260 -150 -230 -150 {lab=#net1}
 N -170 -150 -130 -150 {lab=#net1}
 N -230 -150 -170 -150 {lab=#net1}
-N -260 -300 -260 -260 {lab=#net8}
-N -840 -390 -810 -390 {lab=#net6}
-N -810 -390 -500 -390 {lab=#net6}
-N -440 -390 -300 -390 {lab=#net9}
+N -260 -300 -260 -260 {lab=#net6}
+N -840 -390 -810 -390 {lab=#net4}
+N -810 -390 -500 -390 {lab=#net4}
+N -440 -390 -300 -390 {lab=#net7}
 N 210 40 270 40 {lab=#net3}
+N -640 40 -390 40 {lab=#net2}
+N -390 40 -310 40 {lab=#net2}
+N -230 40 -130 40 {lab=#net3}
+N -130 40 130 40 {lab=#net3}
 C {symbols/pfet_03v3.sym} -410 -90 0 0 {name=MP1
 L=2u
 W=4u
@@ -288,6 +291,7 @@ only_toplevel=false
 value="
 .tran 1u 1m
 .control
+.op
 save all
 run
 *plot i(v6)
